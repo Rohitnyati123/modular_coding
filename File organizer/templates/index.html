@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Success Analytics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>File Organizer</h1>
+        <form method="POST">
+            <label for="source_directory">Enter the source directory path:</label>
+            <input type="text" id="source_directory" name="source_directory" required>
+            <input type="submit" value="Organize Files">
+        </form>
+        {% if message %}
+        <p class="message">{{ message }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
